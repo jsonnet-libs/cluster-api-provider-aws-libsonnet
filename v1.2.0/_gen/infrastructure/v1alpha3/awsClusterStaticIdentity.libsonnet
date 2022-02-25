@@ -53,6 +53,24 @@
   } + self.metadata.withName(name=name),
   '#spec':: d.obj(help='"Spec for this AWSClusterStaticIdentity"'),
   spec: {
+    '#allowedNamespaces':: d.obj(help='"AllowedNamespaces is used to identify which namespaces are allowed to use the identity from. Namespaces can be selected either using an array of namespaces or with label selector. An empty AllowedNamespaces object indicates that AWSClusters can use this identity from any namespace. If this object is nil, no namespaces will be allowed (default behaviour, if this field is not provided) A namespace should be either in the NamespaceList or match with Selector to use the identity."'),
+    allowedNamespaces: {
+      '#selector':: d.obj(help='"An empty selector indicates that AWSClusters cannot use this AWSClusterIdentity from any namespace."'),
+      selector: {
+        '#withMatchExpressions':: d.fn(help='"matchExpressions is a list of label selector requirements. The requirements are ANDed."', args=[d.arg(name='matchExpressions', type=d.T.array)]),
+        withMatchExpressions(matchExpressions): { spec+: { allowedNamespaces+: { selector+: { matchExpressions: if std.isArray(v=matchExpressions) then matchExpressions else [matchExpressions] } } } },
+        '#withMatchExpressionsMixin':: d.fn(help='"matchExpressions is a list of label selector requirements. The requirements are ANDed."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchExpressions', type=d.T.array)]),
+        withMatchExpressionsMixin(matchExpressions): { spec+: { allowedNamespaces+: { selector+: { matchExpressions+: if std.isArray(v=matchExpressions) then matchExpressions else [matchExpressions] } } } },
+        '#withMatchLabels':: d.fn(help='"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \\"key\\", the operator is \\"In\\", and the values array contains only \\"value\\". The requirements are ANDed."', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabels(matchLabels): { spec+: { allowedNamespaces+: { selector+: { matchLabels: matchLabels } } } },
+        '#withMatchLabelsMixin':: d.fn(help='"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \\"key\\", the operator is \\"In\\", and the values array contains only \\"value\\". The requirements are ANDed."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabelsMixin(matchLabels): { spec+: { allowedNamespaces+: { selector+: { matchLabels+: matchLabels } } } },
+      },
+      '#withList':: d.fn(help='"An nil or empty list indicates that AWSClusters cannot use the identity from any namespace."', args=[d.arg(name='list', type=d.T.array)]),
+      withList(list): { spec+: { allowedNamespaces+: { list: if std.isArray(v=list) then list else [list] } } },
+      '#withListMixin':: d.fn(help='"An nil or empty list indicates that AWSClusters cannot use the identity from any namespace."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='list', type=d.T.array)]),
+      withListMixin(list): { spec+: { allowedNamespaces+: { list+: if std.isArray(v=list) then list else [list] } } },
+    },
     '#secretRef':: d.obj(help='"Reference to a secret containing the credentials. The secret should contain the following data keys: AccessKeyID: AKIAIOSFODNN7EXAMPLE SecretAccessKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY SessionToken: Optional"'),
     secretRef: {
       '#withName':: d.fn(help='"Name is unique within a namespace to reference a secret resource."', args=[d.arg(name='name', type=d.T.string)]),
@@ -60,8 +78,6 @@
       '#withNamespace':: d.fn(help='"Namespace defines the space within which the secret name must be unique."', args=[d.arg(name='namespace', type=d.T.string)]),
       withNamespace(namespace): { spec+: { secretRef+: { namespace: namespace } } },
     },
-    '#withAllowedNamespaces':: d.fn(help='"AllowedNamespaces is used to identify which namespaces are allowed to use the identity from. Namespaces can be selected either using an array of namespaces or with label selector. An empty AllowedNamespaces object indicates that AWSClusters can use this identity from any namespace. If this object is nil, no namespaces will be allowed (default behaviour, if this field is not provided) A namespace should be either in the NamespaceList or match with Selector to use the identity."', args=[d.arg(name='allowedNamespaces', type=d.T.any)]),
-    withAllowedNamespaces(allowedNamespaces): { spec+: { allowedNamespaces: allowedNamespaces } },
   },
   '#mixin': 'ignore',
   mixin: self,

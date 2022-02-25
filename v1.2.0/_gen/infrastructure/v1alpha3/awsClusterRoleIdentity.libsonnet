@@ -53,6 +53,24 @@
   } + self.metadata.withName(name=name),
   '#spec':: d.obj(help='"Spec for this AWSClusterRoleIdentity."'),
   spec: {
+    '#allowedNamespaces':: d.obj(help='"AllowedNamespaces is used to identify which namespaces are allowed to use the identity from. Namespaces can be selected either using an array of namespaces or with label selector. An empty AllowedNamespaces object indicates that AWSClusters can use this identity from any namespace. If this object is nil, no namespaces will be allowed (default behaviour, if this field is not provided) A namespace should be either in the NamespaceList or match with Selector to use the identity."'),
+    allowedNamespaces: {
+      '#selector':: d.obj(help='"An empty selector indicates that AWSClusters cannot use this AWSClusterIdentity from any namespace."'),
+      selector: {
+        '#withMatchExpressions':: d.fn(help='"matchExpressions is a list of label selector requirements. The requirements are ANDed."', args=[d.arg(name='matchExpressions', type=d.T.array)]),
+        withMatchExpressions(matchExpressions): { spec+: { allowedNamespaces+: { selector+: { matchExpressions: if std.isArray(v=matchExpressions) then matchExpressions else [matchExpressions] } } } },
+        '#withMatchExpressionsMixin':: d.fn(help='"matchExpressions is a list of label selector requirements. The requirements are ANDed."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchExpressions', type=d.T.array)]),
+        withMatchExpressionsMixin(matchExpressions): { spec+: { allowedNamespaces+: { selector+: { matchExpressions+: if std.isArray(v=matchExpressions) then matchExpressions else [matchExpressions] } } } },
+        '#withMatchLabels':: d.fn(help='"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \\"key\\", the operator is \\"In\\", and the values array contains only \\"value\\". The requirements are ANDed."', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabels(matchLabels): { spec+: { allowedNamespaces+: { selector+: { matchLabels: matchLabels } } } },
+        '#withMatchLabelsMixin':: d.fn(help='"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \\"key\\", the operator is \\"In\\", and the values array contains only \\"value\\". The requirements are ANDed."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabelsMixin(matchLabels): { spec+: { allowedNamespaces+: { selector+: { matchLabels+: matchLabels } } } },
+      },
+      '#withList':: d.fn(help='"An nil or empty list indicates that AWSClusters cannot use the identity from any namespace."', args=[d.arg(name='list', type=d.T.array)]),
+      withList(list): { spec+: { allowedNamespaces+: { list: if std.isArray(v=list) then list else [list] } } },
+      '#withListMixin':: d.fn(help='"An nil or empty list indicates that AWSClusters cannot use the identity from any namespace."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='list', type=d.T.array)]),
+      withListMixin(list): { spec+: { allowedNamespaces+: { list+: if std.isArray(v=list) then list else [list] } } },
+    },
     '#sourceIdentityRef':: d.obj(help='"SourceIdentityRef is a reference to another identity which will be chained to do role assumption. All identity types are accepted."'),
     sourceIdentityRef: {
       '#withKind':: d.fn(help='"Kind of the identity."', args=[d.arg(name='kind', type=d.T.string)]),
@@ -60,8 +78,6 @@
       '#withName':: d.fn(help='"Name of the identity."', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { sourceIdentityRef+: { name: name } } },
     },
-    '#withAllowedNamespaces':: d.fn(help='"AllowedNamespaces is used to identify which namespaces are allowed to use the identity from. Namespaces can be selected either using an array of namespaces or with label selector. An empty AllowedNamespaces object indicates that AWSClusters can use this identity from any namespace. If this object is nil, no namespaces will be allowed (default behaviour, if this field is not provided) A namespace should be either in the NamespaceList or match with Selector to use the identity."', args=[d.arg(name='allowedNamespaces', type=d.T.any)]),
-    withAllowedNamespaces(allowedNamespaces): { spec+: { allowedNamespaces: allowedNamespaces } },
     '#withDurationSeconds':: d.fn(help='"The duration, in seconds, of the role session before it is renewed."', args=[d.arg(name='durationSeconds', type=d.T.integer)]),
     withDurationSeconds(durationSeconds): { spec+: { durationSeconds: durationSeconds } },
     '#withExternalID':: d.fn(help='"A unique identifier that might be required when you assume a role in another account. If the administrator of the account to which the role belongs provided you with an external ID, then provide that value in the ExternalId parameter. This value can be any string, such as a passphrase or account number. A cross-account role is usually set up to trust everyone in an account. Therefore, the administrator of the trusting account might send an external ID to the administrator of the trusted account. That way, only someone with the ID can assume the role, rather than everyone in the account. For more information about the external ID, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party in the IAM User Guide."', args=[d.arg(name='externalID', type=d.T.string)]),
