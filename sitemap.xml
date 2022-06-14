@@ -2,262 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha3/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha3/eksConfig/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha3/eksConfigTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha4/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha4/eksConfig/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1alpha4/eksConfigTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1beta1/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1beta1/eksConfig/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/bootstrap/v1beta1/eksConfigTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1alpha3/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1alpha3/awsManagedControlPlane/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1alpha4/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1alpha4/awsManagedControlPlane/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1beta1/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/controlplane/v1beta1/awsManagedControlPlane/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsCluster/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsClusterControllerIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsClusterRoleIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsClusterStaticIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsFargateProfile/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsMachine/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsMachineTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha3/awsManagedMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsCluster/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsClusterControllerIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsClusterRoleIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsClusterStaticIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsClusterTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsFargateProfile/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsMachine/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsMachineTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1alpha4/awsManagedMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsCluster/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsClusterControllerIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsClusterRoleIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsClusterStaticIdentity/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsClusterTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsFargateProfile/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsMachine/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsMachineTemplate/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cluster-api-provider-aws-libsonnet/v1.2.0/infrastructure/v1beta1/awsManagedMachinePool/</loc>
-         <lastmod>2022-05-09</lastmod>
+         <lastmod>2022-06-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
