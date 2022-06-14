@@ -22,8 +22,6 @@ permalink: /v1.2.0/infrastructure/v1alpha4/awsMachinePool/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -56,6 +54,15 @@ permalink: /v1.2.0/infrastructure/v1alpha4/awsMachinePool/
     * [`fn withName(name)`](#fn-specawslaunchtemplatewithname)
     * [`fn withSshKeyName(sshKeyName)`](#fn-specawslaunchtemplatewithsshkeyname)
     * [`fn withVersionNumber(versionNumber)`](#fn-specawslaunchtemplatewithversionnumber)
+    * [`obj spec.awsLaunchTemplate.additionalSecurityGroups`](#obj-specawslaunchtemplateadditionalsecuritygroups)
+      * [`fn withArn(arn)`](#fn-specawslaunchtemplateadditionalsecuritygroupswitharn)
+      * [`fn withFilters(filters)`](#fn-specawslaunchtemplateadditionalsecuritygroupswithfilters)
+      * [`fn withFiltersMixin(filters)`](#fn-specawslaunchtemplateadditionalsecuritygroupswithfiltersmixin)
+      * [`fn withId(id)`](#fn-specawslaunchtemplateadditionalsecuritygroupswithid)
+      * [`obj spec.awsLaunchTemplate.additionalSecurityGroups.filters`](#obj-specawslaunchtemplateadditionalsecuritygroupsfilters)
+        * [`fn withName(name)`](#fn-specawslaunchtemplateadditionalsecuritygroupsfilterswithname)
+        * [`fn withValues(values)`](#fn-specawslaunchtemplateadditionalsecuritygroupsfilterswithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specawslaunchtemplateadditionalsecuritygroupsfilterswithvaluesmixin)
     * [`obj spec.awsLaunchTemplate.ami`](#obj-specawslaunchtemplateami)
       * [`fn withEksLookupType(eksLookupType)`](#fn-specawslaunchtemplateamiwithekslookuptype)
       * [`fn withId(id)`](#fn-specawslaunchtemplateamiwithid)
@@ -75,10 +82,21 @@ permalink: /v1.2.0/infrastructure/v1alpha4/awsMachinePool/
       * [`fn withOnDemandBaseCapacity(onDemandBaseCapacity)`](#fn-specmixedinstancespolicyinstancesdistributionwithondemandbasecapacity)
       * [`fn withOnDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity)`](#fn-specmixedinstancespolicyinstancesdistributionwithondemandpercentageabovebasecapacity)
       * [`fn withSpotAllocationStrategy(spotAllocationStrategy)`](#fn-specmixedinstancespolicyinstancesdistributionwithspotallocationstrategy)
+    * [`obj spec.mixedInstancesPolicy.overrides`](#obj-specmixedinstancespolicyoverrides)
+      * [`fn withInstanceType(instanceType)`](#fn-specmixedinstancespolicyoverrideswithinstancetype)
   * [`obj spec.refreshPreferences`](#obj-specrefreshpreferences)
     * [`fn withInstanceWarmup(instanceWarmup)`](#fn-specrefreshpreferenceswithinstancewarmup)
     * [`fn withMinHealthyPercentage(minHealthyPercentage)`](#fn-specrefreshpreferenceswithminhealthypercentage)
     * [`fn withStrategy(strategy)`](#fn-specrefreshpreferenceswithstrategy)
+  * [`obj spec.subnets`](#obj-specsubnets)
+    * [`fn withArn(arn)`](#fn-specsubnetswitharn)
+    * [`fn withFilters(filters)`](#fn-specsubnetswithfilters)
+    * [`fn withFiltersMixin(filters)`](#fn-specsubnetswithfiltersmixin)
+    * [`fn withId(id)`](#fn-specsubnetswithid)
+    * [`obj spec.subnets.filters`](#obj-specsubnetsfilters)
+      * [`fn withName(name)`](#fn-specsubnetsfilterswithname)
+      * [`fn withValues(values)`](#fn-specsubnetsfilterswithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specsubnetsfilterswithvaluesmixin)
 
 ## Fields
 
@@ -193,24 +211,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -474,6 +474,74 @@ withVersionNumber(versionNumber)
 
 "VersionNumber is the version of the launch template that is applied. Typically a new version is created when at least one of the following happens: 1) A new launch template spec is applied. 2) One or more parameters in an existing template is changed. 3) A new AMI is discovered."
 
+## obj spec.awsLaunchTemplate.additionalSecurityGroups
+
+"AdditionalSecurityGroups is an array of references to security groups that should be applied to the instances. These security groups would be set in addition to any security groups defined at the cluster level or in the actuator."
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.withArn
+
+```ts
+withArn(arn)
+```
+
+"ARN of resource"
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.withFilters
+
+```ts
+withFilters(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.withFiltersMixin
+
+```ts
+withFiltersMixin(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.withId
+
+```ts
+withId(id)
+```
+
+"ID of resource"
+
+## obj spec.awsLaunchTemplate.additionalSecurityGroups.filters
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.filters.withName
+
+```ts
+withName(name)
+```
+
+"Name of the filter. Filter names are case-sensitive."
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.filters.withValues
+
+```ts
+withValues(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+### fn spec.awsLaunchTemplate.additionalSecurityGroups.filters.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.awsLaunchTemplate.ami
 
 "AMI is the reference to the AMI from which to create the machine instance."
@@ -612,6 +680,18 @@ withSpotAllocationStrategy(spotAllocationStrategy)
 
 "SpotAllocationStrategy indicates how to allocate instances across Spot Instance pools."
 
+## obj spec.mixedInstancesPolicy.overrides
+
+
+
+### fn spec.mixedInstancesPolicy.overrides.withInstanceType
+
+```ts
+withInstanceType(instanceType)
+```
+
+
+
 ## obj spec.refreshPreferences
 
 "RefreshPreferences describes set of preferences associated with the instance refresh request."
@@ -639,3 +719,71 @@ withStrategy(strategy)
 ```
 
 "The strategy to use for the instance refresh. The only valid value is Rolling. A rolling update is an update that is applied to all instances in an Auto Scaling group until all instances have been updated."
+
+## obj spec.subnets
+
+"Subnets is an array of subnet configurations"
+
+### fn spec.subnets.withArn
+
+```ts
+withArn(arn)
+```
+
+"ARN of resource"
+
+### fn spec.subnets.withFilters
+
+```ts
+withFilters(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.subnets.withFiltersMixin
+
+```ts
+withFiltersMixin(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.subnets.withId
+
+```ts
+withId(id)
+```
+
+"ID of resource"
+
+## obj spec.subnets.filters
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.subnets.filters.withName
+
+```ts
+withName(name)
+```
+
+"Name of the filter. Filter names are case-sensitive."
+
+### fn spec.subnets.filters.withValues
+
+```ts
+withValues(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+### fn spec.subnets.filters.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+**Note:** This function appends passed data to existing values

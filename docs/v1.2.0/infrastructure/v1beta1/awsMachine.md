@@ -22,8 +22,6 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsMachine/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,6 +50,15 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsMachine/
   * [`fn withSshKeyName(sshKeyName)`](#fn-specwithsshkeyname)
   * [`fn withTenancy(tenancy)`](#fn-specwithtenancy)
   * [`fn withUncompressedUserData(uncompressedUserData)`](#fn-specwithuncompresseduserdata)
+  * [`obj spec.additionalSecurityGroups`](#obj-specadditionalsecuritygroups)
+    * [`fn withArn(arn)`](#fn-specadditionalsecuritygroupswitharn)
+    * [`fn withFilters(filters)`](#fn-specadditionalsecuritygroupswithfilters)
+    * [`fn withFiltersMixin(filters)`](#fn-specadditionalsecuritygroupswithfiltersmixin)
+    * [`fn withId(id)`](#fn-specadditionalsecuritygroupswithid)
+    * [`obj spec.additionalSecurityGroups.filters`](#obj-specadditionalsecuritygroupsfilters)
+      * [`fn withName(name)`](#fn-specadditionalsecuritygroupsfilterswithname)
+      * [`fn withValues(values)`](#fn-specadditionalsecuritygroupsfilterswithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specadditionalsecuritygroupsfilterswithvaluesmixin)
   * [`obj spec.ami`](#obj-specami)
     * [`fn withEksLookupType(eksLookupType)`](#fn-specamiwithekslookuptype)
     * [`fn withId(id)`](#fn-specamiwithid)
@@ -60,6 +67,14 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsMachine/
     * [`fn withSecretCount(secretCount)`](#fn-speccloudinitwithsecretcount)
     * [`fn withSecretPrefix(secretPrefix)`](#fn-speccloudinitwithsecretprefix)
     * [`fn withSecureSecretsBackend(secureSecretsBackend)`](#fn-speccloudinitwithsecuresecretsbackend)
+  * [`obj spec.nonRootVolumes`](#obj-specnonrootvolumes)
+    * [`fn withDeviceName(deviceName)`](#fn-specnonrootvolumeswithdevicename)
+    * [`fn withEncrypted(encrypted)`](#fn-specnonrootvolumeswithencrypted)
+    * [`fn withEncryptionKey(encryptionKey)`](#fn-specnonrootvolumeswithencryptionkey)
+    * [`fn withIops(iops)`](#fn-specnonrootvolumeswithiops)
+    * [`fn withSize(size)`](#fn-specnonrootvolumeswithsize)
+    * [`fn withThroughput(throughput)`](#fn-specnonrootvolumeswiththroughput)
+    * [`fn withType(type)`](#fn-specnonrootvolumeswithtype)
   * [`obj spec.rootVolume`](#obj-specrootvolume)
     * [`fn withDeviceName(deviceName)`](#fn-specrootvolumewithdevicename)
     * [`fn withEncrypted(encrypted)`](#fn-specrootvolumewithencrypted)
@@ -75,6 +90,10 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsMachine/
     * [`fn withFilters(filters)`](#fn-specsubnetwithfilters)
     * [`fn withFiltersMixin(filters)`](#fn-specsubnetwithfiltersmixin)
     * [`fn withId(id)`](#fn-specsubnetwithid)
+    * [`obj spec.subnet.filters`](#obj-specsubnetfilters)
+      * [`fn withName(name)`](#fn-specsubnetfilterswithname)
+      * [`fn withValues(values)`](#fn-specsubnetfilterswithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specsubnetfilterswithvaluesmixin)
 
 ## Fields
 
@@ -189,24 +208,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -440,6 +441,74 @@ withUncompressedUserData(uncompressedUserData)
 
 "UncompressedUserData specify whether the user data is gzip-compressed before it is sent to ec2 instance. cloud-init has built-in support for gzip-compressed user data user data stored in aws secret manager is always gzip-compressed."
 
+## obj spec.additionalSecurityGroups
+
+"AdditionalSecurityGroups is an array of references to security groups that should be applied to the instance. These security groups would be set in addition to any security groups defined at the cluster level or in the actuator. It is possible to specify either IDs of Filters. Using Filters will cause additional requests to AWS API and if tags change the attached security groups might change too."
+
+### fn spec.additionalSecurityGroups.withArn
+
+```ts
+withArn(arn)
+```
+
+"ARN of resource"
+
+### fn spec.additionalSecurityGroups.withFilters
+
+```ts
+withFilters(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.additionalSecurityGroups.withFiltersMixin
+
+```ts
+withFiltersMixin(filters)
+```
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.additionalSecurityGroups.withId
+
+```ts
+withId(id)
+```
+
+"ID of resource"
+
+## obj spec.additionalSecurityGroups.filters
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.additionalSecurityGroups.filters.withName
+
+```ts
+withName(name)
+```
+
+"Name of the filter. Filter names are case-sensitive."
+
+### fn spec.additionalSecurityGroups.filters.withValues
+
+```ts
+withValues(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+### fn spec.additionalSecurityGroups.filters.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.ami
 
 "AMI is the reference to the AMI from which to create the machine instance."
@@ -495,6 +564,66 @@ withSecureSecretsBackend(secureSecretsBackend)
 ```
 
 "SecureSecretsBackend, when set to parameter-store will utilize the AWS Systems Manager Parameter Storage to distribute secrets. By default or with the value of secrets-manager, will use AWS Secrets Manager instead."
+
+## obj spec.nonRootVolumes
+
+"Configuration options for the non root storage volumes."
+
+### fn spec.nonRootVolumes.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"Device name"
+
+### fn spec.nonRootVolumes.withEncrypted
+
+```ts
+withEncrypted(encrypted)
+```
+
+"Encrypted is whether the volume should be encrypted or not."
+
+### fn spec.nonRootVolumes.withEncryptionKey
+
+```ts
+withEncryptionKey(encryptionKey)
+```
+
+"EncryptionKey is the KMS key to use to encrypt the volume. Can be either a KMS key ID or ARN. If Encrypted is set and this is omitted, the default AWS key will be used. The key must already exist and be accessible by the controller."
+
+### fn spec.nonRootVolumes.withIops
+
+```ts
+withIops(iops)
+```
+
+"IOPS is the number of IOPS requested for the disk. Not applicable to all types."
+
+### fn spec.nonRootVolumes.withSize
+
+```ts
+withSize(size)
+```
+
+"Size specifies size (in Gi) of the storage device. Must be greater than the image snapshot size or 8 (whichever is greater)."
+
+### fn spec.nonRootVolumes.withThroughput
+
+```ts
+withThroughput(throughput)
+```
+
+"Throughput to provision in MiB/s supported for the volume type. Not applicable to all types."
+
+### fn spec.nonRootVolumes.withType
+
+```ts
+withType(type)
+```
+
+"Type is the type of the volume (e.g. gp2, io1, etc...)."
 
 ## obj spec.rootVolume
 
@@ -605,3 +734,33 @@ withId(id)
 ```
 
 "ID of resource"
+
+## obj spec.subnet.filters
+
+"Filters is a set of key/value pairs used to identify a resource They are applied according to the rules defined by the AWS API: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html"
+
+### fn spec.subnet.filters.withName
+
+```ts
+withName(name)
+```
+
+"Name of the filter. Filter names are case-sensitive."
+
+### fn spec.subnet.filters.withValues
+
+```ts
+withValues(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+### fn spec.subnet.filters.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"Values includes one or more filter values. Filter values are case-sensitive."
+
+**Note:** This function appends passed data to existing values

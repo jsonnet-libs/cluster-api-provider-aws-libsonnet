@@ -22,8 +22,6 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsCluster/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -68,6 +66,20 @@ permalink: /v1.2.0/infrastructure/v1beta1/awsCluster/
     * [`obj spec.network.cni`](#obj-specnetworkcni)
       * [`fn withCniIngressRules(cniIngressRules)`](#fn-specnetworkcniwithcniingressrules)
       * [`fn withCniIngressRulesMixin(cniIngressRules)`](#fn-specnetworkcniwithcniingressrulesmixin)
+      * [`obj spec.network.cni.cniIngressRules`](#obj-specnetworkcnicniingressrules)
+        * [`fn withDescription(description)`](#fn-specnetworkcnicniingressruleswithdescription)
+        * [`fn withFromPort(fromPort)`](#fn-specnetworkcnicniingressruleswithfromport)
+        * [`fn withProtocol(protocol)`](#fn-specnetworkcnicniingressruleswithprotocol)
+        * [`fn withToPort(toPort)`](#fn-specnetworkcnicniingressruleswithtoport)
+    * [`obj spec.network.subnets`](#obj-specnetworksubnets)
+      * [`fn withAvailabilityZone(availabilityZone)`](#fn-specnetworksubnetswithavailabilityzone)
+      * [`fn withCidrBlock(cidrBlock)`](#fn-specnetworksubnetswithcidrblock)
+      * [`fn withId(id)`](#fn-specnetworksubnetswithid)
+      * [`fn withIsPublic(isPublic)`](#fn-specnetworksubnetswithispublic)
+      * [`fn withNatGatewayId(natGatewayId)`](#fn-specnetworksubnetswithnatgatewayid)
+      * [`fn withRouteTableId(routeTableId)`](#fn-specnetworksubnetswithroutetableid)
+      * [`fn withTags(tags)`](#fn-specnetworksubnetswithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specnetworksubnetswithtagsmixin)
     * [`obj spec.network.vpc`](#obj-specnetworkvpc)
       * [`fn withAvailabilityZoneSelection(availabilityZoneSelection)`](#fn-specnetworkvpcwithavailabilityzoneselection)
       * [`fn withAvailabilityZoneUsageLimit(availabilityZoneUsageLimit)`](#fn-specnetworkvpcwithavailabilityzoneusagelimit)
@@ -190,24 +202,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -548,6 +542,112 @@ withCniIngressRulesMixin(cniIngressRules)
 ```
 
 "CNIIngressRules specify rules to apply to control plane and worker node security groups. The source for the rule will be set to control plane and worker security group IDs."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.network.cni.cniIngressRules
+
+"CNIIngressRules specify rules to apply to control plane and worker node security groups. The source for the rule will be set to control plane and worker security group IDs."
+
+### fn spec.network.cni.cniIngressRules.withDescription
+
+```ts
+withDescription(description)
+```
+
+
+
+### fn spec.network.cni.cniIngressRules.withFromPort
+
+```ts
+withFromPort(fromPort)
+```
+
+
+
+### fn spec.network.cni.cniIngressRules.withProtocol
+
+```ts
+withProtocol(protocol)
+```
+
+"SecurityGroupProtocol defines the protocol type for a security group rule."
+
+### fn spec.network.cni.cniIngressRules.withToPort
+
+```ts
+withToPort(toPort)
+```
+
+
+
+## obj spec.network.subnets
+
+"Subnets configuration."
+
+### fn spec.network.subnets.withAvailabilityZone
+
+```ts
+withAvailabilityZone(availabilityZone)
+```
+
+"AvailabilityZone defines the availability zone to use for this subnet in the cluster's region."
+
+### fn spec.network.subnets.withCidrBlock
+
+```ts
+withCidrBlock(cidrBlock)
+```
+
+"CidrBlock is the CIDR block to be used when the provider creates a managed VPC."
+
+### fn spec.network.subnets.withId
+
+```ts
+withId(id)
+```
+
+"ID defines a unique identifier to reference this resource."
+
+### fn spec.network.subnets.withIsPublic
+
+```ts
+withIsPublic(isPublic)
+```
+
+"IsPublic defines the subnet as a public subnet. A subnet is public when it is associated with a route table that has a route to an internet gateway."
+
+### fn spec.network.subnets.withNatGatewayId
+
+```ts
+withNatGatewayId(natGatewayId)
+```
+
+"NatGatewayID is the NAT gateway id associated with the subnet. Ignored unless the subnet is managed by the provider, in which case this is set on the public subnet where the NAT gateway resides. It is then used to determine routes for private subnets in the same AZ as the public subnet."
+
+### fn spec.network.subnets.withRouteTableId
+
+```ts
+withRouteTableId(routeTableId)
+```
+
+"RouteTableID is the routing table id associated with the subnet."
+
+### fn spec.network.subnets.withTags
+
+```ts
+withTags(tags)
+```
+
+"Tags is a collection of tags describing the resource."
+
+### fn spec.network.subnets.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+"Tags is a collection of tags describing the resource."
 
 **Note:** This function appends passed data to existing values
 
