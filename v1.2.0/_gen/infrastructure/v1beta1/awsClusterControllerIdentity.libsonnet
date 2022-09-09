@@ -47,7 +47,7 @@
     apiVersion: 'infrastructure.cluster.x-k8s.io/v1beta1',
     kind: 'AWSClusterControllerIdentity',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"Spec for this AWSClusterControllerIdentity."'),
   spec: {
